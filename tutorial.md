@@ -1,44 +1,51 @@
-# Tutorial curso git / git hub.
+# **Tutorial curso git / git hub.**
 ### Links úteis:
 - [Sintax markdows.](https://www.markdownguide.org/getting-started/)
 - [Exercícios Markdown.](https://www.markdowntutorial.com)
 
 ### Objetos fundamentais do Guit.
-- Blobs.  "Bolha":
+- **Blobs.**  "Bolha":
 _Objeto que armazena metadados,detem o SHA1 do arquivo,ou seja, a 
 "Criptografia"_.
 
-- Trees.  "Arvores":
+- **Trees.**  "Arvores":
 _As arvores também armazenam metadados , apontam para os Blobs , pode apontar para outra arvore e também guardam o nome do arquivo._
 
-- Commits:
-_O commit aponta para uma arvore, aponta para um parente,aponta para o autor e para mensagem , ele também armazena o horário que foi criado,também detem um SHAR1_.
+- **Commits.**
+_Os commits são os objetos do texto, que dão significado às alterações, e eles apontam para uma arvore, apontam para um parente, apontam para o autor e apontam para mensagens ,além de textos, eles carregam metadados que armazenam também o horário de criação , altor e também carregam a Criptografia SHAR1_.
 
 
 
-### Comandos iniciais no terminal:
-###### **1º passo, criando ou deletando um diretório:**
+### **Comandos iniciais no terminal:**
+###### **1- Criando ou deletando um diretório:**
 > - _mkdir_: **Cria** uma pasta ou "diretório".Exemplo : mkdir _nome escolhido_.
-_rmdir_ : **Deleta** o diretório completo.**Exemplo:** rmdir /S /Q nome da pasta.
-###### **2º passo, inicialização do Git :**
+-_rmdir_ : **Deleta** o diretório completo.**Exemplo:** rmdir /S /Q nome da pasta.
+###### **2- Inciando o repositório com o cmd, "_git init_" - Mover arquivos e iniciar o versionamento com o cmd, _"git add"_- Criar o primeiro "commit", usando o _"git commit"_**.
+###### **a ) primeiro passo, inicialização do Git :**
 > - Use o comando **"git init"** dentro do diretório criado.Uma pasta oculta **".git"** contendo os arquivos **_hooks, info, objetcts, refs_** é criada, em seguida receberá a mensagem que foi inicializado um repositório vazio dentro do respectivo diretório.
 Entre com o comando **"_ls -a_"** ,onde a flag **"-a"** mostra a pasta oculta.
+###### **b ) segundo passo, movendo o arquivo dentro do Git**:
+>- Dentro do diretório escolhido, o comando usado será o **"git add + (*)"** , onde a flag **(*)** engloba todos os arquivos não salvos.
+###### **c ) terceiro passo, criando o commit:**
+>- O próximo passo será o **commit -m** seguido de uma **"String"**, onde a String será um título comentando a alteração feita.
+Exemplo: **git commit -m "Salve de rep nº 1"**
 
-###### **3º passo, Cadastro de usuário no GIT**:
-> No terminal GIT digite o comando **git config --global user.email seuemail@etc.etal e finalize com Enter"**. Obs : Você pode setar de forma Global ou não o repositório , usando para isto a flag **global**.
+###### **3- Cadastro de usuário no GIT**:
+> No terminal Git digite o comando **git config --global user.email seuemail@etc.etal e finalize com Enter"**. Obs : Você pode setar de forma Global ou não o repositório , usando para isto a flag **global**.
 Novamente no terminal, entre com o comando **git config --user.name _" nome de usuário"_ e finalize com Enter** .
 
-###### **Criando um arquivo Markdown**:
-> Use o comando **_echo:_** para criar um arquivo dentro do respectivo diretório .Exemplo: **_echo nome do arquivo_ ">" _nome do arquivo_.extensão**.
-###### **Comandos básicos** :
+###### **4- Criando um arquivo Markdown**:
+> Use o comando **_echo:_** para criar um arquivo dentro do respectivo diretório .Exemplo: **_echo nome do arquivo_ ">" _nome do arquivo_.extensão** onde a extensão do markdown é a **.md** .
+
+###### **Alguns comandos básicos** :
 > - _dir_ : **Lista** os diretórios *pastas* do local.
-> - _ctrl_ + L : **Limpa** o terminal 
+> - _ctrl_ + l : **Limpa** o terminal .
 > - _cd nome da pasta_ : **Entra** no diretório escolhido .
 > - _Seta para cima_ ^ : **Lista** os últimos comandos realizados.
 > -  _del_ : **Deleta** um arquivo dentro do diretório.
 
- ## Formas de autenticação:
- ### 1 - Chave SSH.
+ ## **Formas de autenticação:**
+ ###### **1 - Chave SSH.**
  - **Atribuindo chave SSH**. Usando de chave primaria em sua maquina, e chave pública no servidor escolhido, a mesma garante a segurança de seus dados , desde que , sua chave primaria não caia em mãos erradas.
  **GitHub**. Para uso de chave SSH no servidor GitHub, os paço de acesso são :
  _Account Setings_ > _SSH and GPG Keys_.
