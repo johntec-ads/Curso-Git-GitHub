@@ -23,13 +23,13 @@ _Os commits são os objetos do texto, que dão significado às alterações, e e
 
 ###### **2- Inciando o repositório com ,"_git init_" - Movendo arquivos e iniciando o versionamento com, _"git add"_- Criando o primeiro commit, usando o _"git commit"_**.
 ###### **a ) primeiro passo, inicialização do Git :**
-> - Apos criar um diretório, e estando dentro do mesmo, use o comando **"git init"** , neste momento o diretório passa para **Repositório**,e uma pasta oculta **".git"** contendo os arquivos **_hooks, info, objetcts, refs_** é criada, em seguida receberá a mensagem que foi inicializado um repositório vazio dentro do respectivo diretório.
+> - Apos criar um diretório, e estando dentro do mesmo, use o comando **"git init"** , neste momento o diretório passa a ser um **repositório**,e uma pasta oculta **".git"** contendo os arquivos **_hooks, info, objetcts, refs_** é criada, em seguida receberá a mensagem que foi inicializado um repositório vazio dentro do respectivo diretório.
 Entre com o comando **"_ls -a_"** ,onde a flag **"-a"** mostra a pasta oculta.
-###### **b) Criando um arquivo**:
+###### **b) segundo passo, criando um arquivo**:
 > Use o comando **_echo:_**. Neste exemplo vamos criar um arquivo "Markdown" dentro do respectivo repositório .Exemplo: **_echo nome do arquivo_ ">" _nome do arquivo_.extensão** onde a extensão do markdown é a **.md** .
 
-###### **c ) segundo passo, movendo o arquivo dentro do Git**:
->- Dentro do diretório escolhido, o comando usado será o **"git add + (*)"** , onde a flag **(*)** engloba todos os arquivos não salvos, passando o arquivo de "untracked" para "tracked".
+###### **c ) terceiro passo, movendo o arquivo dentro do Git**:
+>- Dentro do diretório escolhido, o comando usado será o **"git add + (*)"** , onde a flag **(*)** engloba todos os arquivos não salvos,movendo o arquivo direto para **Staged** passando o arquivo de "untracked" para "tracked".
 
 ###### **d ) terceiro passo, criando o commit:**
 >- O próximo passo será o **commit -m** seguido de uma **"String"**, onde a String será um título comentando a alteração feita.
@@ -81,9 +81,13 @@ Dentro do terminal _Git_ , insira os seguintes comandos:
  - Novamente no terminal do Git Bash , crie um diretório "pasta" para o armazenameto  do repositório, e dentro do mesmo, execute o comando: **Git clone** _"colar o endereço HTTPS copiado"_ , no próximo passo o Git reconhecerá de maneira automática seu nickname , feito isto , o terminal vai pedir a chave **TOKEN** , após entrar com a chave , você terá seus dados clonados com sucesso.
 
 # Conceitos e terminologias:
-###### Tracked and Untracked (Rastreado e Não rastreado).
-- Os arquivos **tracked** "rastreados" ,arquivos que o Get já tem ciência,  são definidos por três estágios, **Unmodified "Não modificado", Modified "Já modificado" e o Staged "Encenando,que é o estágio que esta se preparando para mudar de agrupamento"**.
-- Após criar um arquivo com o mando **echo nomeArquivo> echo "nomeArquivo.extensão"** , o mesmo ainda não foi detectado pelo Get, e para que seja , entramos com o comando 
-
-
-já os arquivos **Untrecked** ,são aquivos que o Get não tem ciência ainda , tem seus seguintes estágios ,adiciona um arquivo,  
+###### **Tracked and Untracked (Rastreado e Não rastreado).**
+###### Modified , Unmodified e Staged.(Modificado , Não modificado e Encenado ou aguardando para o próximo estágio)
+- Os arquivos **tracked e untracked** , arquivos que o Git já tem ciência ou não, são definidos por três estágios, **Unmodified, Modified e Staged**
+###### **Situações hipotéticas.**
+- **Untracked e Unmodified**.Após criar um arquivo com o comando **echo nomeArquivo > "nomeArquivo.extensão"** , o mesmo ainda não foi detectado pelo Git ,estando ele "untracked" e como não foi modificado, também esta Unmodified,sendo assim, usamos o comando "git add * " indo direto de Untracked  para  Staged.
+- **Modified**. Ao abrir e alterar uma arquivo, o Git altera seu **SSH**,identificando que houve alterações, e mudando seu status para **Modified**.Se usarmos em seguida o comando **Add (*)**, o arquivo passa de modified para **Staged**.
+- **Commit**. Quando após mudar o status dos arquivos para **Modified** ,usamos o **git commit** para encapsular todos os dados do arquivo,que em seguida terá o retorno dos arquivos encapsulados para o status de **Modified** novamente.
+###### **Repositórios e Servidores.**
+- REMOTE REPOSITORY.
+- WORKING DIRECTORY -> STAGING AREA -> LOCAL REPOSITORY.
