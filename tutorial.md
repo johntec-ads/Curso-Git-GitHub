@@ -85,9 +85,11 @@ Dentro do terminal _Git_ , insira os seguintes comandos:
 ###### Modified , Unmodified e Staged.(Modificado , Não modificado e Encenado ou aguardando para o próximo estágio)
 - Os arquivos **tracked e untracked** , arquivos que o Git já tem ciência ou não, são definidos por três estágios, **Unmodified, Modified e Staged**
 ###### **Situações hipotéticas.**
-- **Untracked e Unmodified**.Após criar um arquivo com o comando **echo nomeArquivo > "nomeArquivo.extensão"** , o mesmo ainda não foi detectado pelo Git ,estando ele "untracked" e como não foi modificado, também esta Unmodified,sendo assim, usamos o comando "git add * " indo direto de Untracked  para  Staged.
-- **Modified**. Ao abrir e alterar uma arquivo, o Git altera seu **SSH**,identificando que houve alterações, e mudando seu status para **Modified**.Se usarmos em seguida o comando **Add (*)**, o arquivo passa de modified para **Staged**.
-- **Commit**. Quando após mudar o status dos arquivos para **Modified** ,usamos o **git commit** para encapsular todos os dados do arquivo,que em seguida terá o retorno dos arquivos encapsulados para o status de **Modified** novamente.
+- **Untracked e Unmodified**.Após criar um arquivo com o comando **echo nomeArquivo > "nomeArquivo.extensão"** , o mesmo ainda não foi detectado pelo Git ,estando ele "untracked" e como não foi modificado, também esta Unmodified,sendo assim, usamos o comando "git add * " indo de Untracked para tracked, e de Unmodified para  Staged.
+- **Modified**. Ao abrir e alterar uma arquivo, o Git altera sua Criptografia **SSH**,identificando que houve alterações, e mudando seu status para **Modified**.Se usarmos em seguida o comando **Add (*)**, o arquivo passa de modified para **Staged**.
+- **Commit**. Quando após mudar o status dos arquivos para **Modified** ,usamos o **git commit -m "streng"** para encapsular todos os dados do arquivo,que em seguida terá o retorno dos arquivos encapsulados para o status de **Modified** novamente.
 ###### **Repositórios e Servidores.**
-- REMOTE REPOSITORY.
-- WORKING DIRECTORY -> STAGING AREA -> LOCAL REPOSITORY.
+- Servidor -> REMOTE REPOSITORY.
+- Ambiente de desenvolvimento -> WORKING DIRECTORY -> STAGING AREA -> LOCAL REPOSITORY.
+- As alterações que são feitas no repositório local , não repercutem diretamente no servidor remoto.Para isto , deve ser realizado o envio através de comando do terminal GitHub. 
+- Os arquivos ficam alternando entre a WORKING DIRECTORY e a STAGING AREA ,quando alterado, o arquivo é enviado sempre com o comando **add (*)** para a STAGING AREA, se alterado novamente, ele retora para a WORKING DIRECTORY, e aguarda novamente o comando **add (*)**.
