@@ -20,13 +20,18 @@ _Os commits são os objetos do texto, que dão significado às alterações, e e
 ###### **1- Criando ou deletando um diretório:**
 > - _mkdir_: **Cria** uma pasta ou "diretório".Exemplo : mkdir _nome escolhido_.
 -_rmdir_ : **Deleta** o diretório completo.**Exemplo:** rmdir /S /Q nome da pasta.
-###### **2- Inciando o repositório com o cmd, "_git init_" - Mover arquivos e iniciar o versionamento com o cmd, _"git add"_- Criar o primeiro "commit", usando o _"git commit"_**.
+
+###### **2- Inciando o repositório com ,"_git init_" - Movendo arquivos e iniciando o versionamento com, _"git add"_- Criando o primeiro commit, usando o _"git commit"_**.
 ###### **a ) primeiro passo, inicialização do Git :**
-> - Use o comando **"git init"** dentro do diretório criado.Uma pasta oculta **".git"** contendo os arquivos **_hooks, info, objetcts, refs_** é criada, em seguida receberá a mensagem que foi inicializado um repositório vazio dentro do respectivo diretório.
+> - Apos criar um diretório, e estando dentro do mesmo, use o comando **"git init"** , neste momento o diretório passa para **Repositório**,e uma pasta oculta **".git"** contendo os arquivos **_hooks, info, objetcts, refs_** é criada, em seguida receberá a mensagem que foi inicializado um repositório vazio dentro do respectivo diretório.
 Entre com o comando **"_ls -a_"** ,onde a flag **"-a"** mostra a pasta oculta.
-###### **b ) segundo passo, movendo o arquivo dentro do Git**:
->- Dentro do diretório escolhido, o comando usado será o **"git add + (*)"** , onde a flag **(*)** engloba todos os arquivos não salvos.
-###### **c ) terceiro passo, criando o commit:**
+###### **b) Criando um arquivo**:
+> Use o comando **_echo:_**. Neste exemplo vamos criar um arquivo "Markdown" dentro do respectivo repositório .Exemplo: **_echo nome do arquivo_ ">" _nome do arquivo_.extensão** onde a extensão do markdown é a **.md** .
+
+###### **c ) segundo passo, movendo o arquivo dentro do Git**:
+>- Dentro do diretório escolhido, o comando usado será o **"git add + (*)"** , onde a flag **(*)** engloba todos os arquivos não salvos, passando o arquivo de "untracked" para "tracked".
+
+###### **d ) terceiro passo, criando o commit:**
 >- O próximo passo será o **commit -m** seguido de uma **"String"**, onde a String será um título comentando a alteração feita.
 Exemplo: **git commit -m "Salve de rep nº 1"**
 
@@ -34,8 +39,7 @@ Exemplo: **git commit -m "Salve de rep nº 1"**
 > No terminal Git digite o comando **git config --global user.email seuemail@etc.etal e finalize com Enter"**. Obs : Você pode setar de forma Global ou não o repositório , usando para isto a flag **global**.
 Novamente no terminal, entre com o comando **git config --user.name _" nome de usuário"_ e finalize com Enter** .
 
-###### **4- Criando um arquivo Markdown**:
-> Use o comando **_echo:_** para criar um arquivo dentro do respectivo diretório .Exemplo: **_echo nome do arquivo_ ">" _nome do arquivo_.extensão** onde a extensão do markdown é a **.md** .
+
 
 ###### **Alguns comandos básicos** :
 > - _dir_ : **Lista** os diretórios *pastas* do local.
@@ -76,3 +80,10 @@ Dentro do terminal _Git_ , insira os seguintes comandos:
  -  Dentro do servidor Git Hub , na área principal do repositório escolhido , você terá o campo de nome **Code**, nele você tem três opções para copiar o endereço do repositório , como se trata de chave **TOKEN**, então copiaremos o respectivo endereço do campo sugerido .
  - Novamente no terminal do Git Bash , crie um diretório "pasta" para o armazenameto  do repositório, e dentro do mesmo, execute o comando: **Git clone** _"colar o endereço HTTPS copiado"_ , no próximo passo o Git reconhecerá de maneira automática seu nickname , feito isto , o terminal vai pedir a chave **TOKEN** , após entrar com a chave , você terá seus dados clonados com sucesso.
 
+# Conceitos e terminologias:
+###### Tracked and Untracked (Rastreado e Não rastreado).
+- Os arquivos **tracked** "rastreados" ,arquivos que o Get já tem ciência,  são definidos por três estágios, **Unmodified "Não modificado", Modified "Já modificado" e o Staged "Encenando,que é o estágio que esta se preparando para mudar de agrupamento"**.
+- Após criar um arquivo com o mando **echo nomeArquivo> echo "nomeArquivo.extensão"** , o mesmo ainda não foi detectado pelo Get, e para que seja , entramos com o comando 
+
+
+já os arquivos **Untrecked** ,são aquivos que o Get não tem ciência ainda , tem seus seguintes estágios ,adiciona um arquivo,  
