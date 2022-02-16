@@ -24,7 +24,7 @@ _Os commits são os objetos do texto, que dão significado às alterações, e e
 
 ###### **2- Inciando o repositório com ,"_git init_" - Movendo arquivos e iniciando o versionamento com, _"git add"_- Criando o primeiro commit, usando o _"git commit"_**.
 ###### **a ) primeiro passo, inicialização do Git :**
-> - Apos criar um diretório, e estando dentro do mesmo, use o comando **"git init"** , neste momento o diretório passa a ser um **repositório**,e uma pasta oculta **".git"** contendo os arquivos **_hooks, info, objetcts, refs_** é criada, em seguida receberá a mensagem que foi inicializado um repositório vazio dentro do respectivo diretório.
+> - Após criar um diretório, e estando dentro do mesmo, use o comando **"git init"** , neste momento o diretório passa a ser um **repositório**,e uma pasta oculta **".git"** contendo os arquivos **_hooks, info, objetcts, refs_** é criada, em seguida receberá a mensagem que foi inicializado um repositório vazio dentro do respectivo diretório.
 Entre com o comando **"_ls -a_"** ,onde a flag **"-a"** mostra a pasta oculta.
 ###### **b) segundo passo, criando um arquivo**:
 > Use o comando **_echo:_**. Neste exemplo vamos criar um arquivo "Markdown" dentro do respectivo repositório .Exemplo: **_echo nome do arquivo_ ">" _nome do arquivo_.extensão** onde a extensão do markdown é a **.md** .
@@ -46,16 +46,18 @@ Novamente no terminal, entre com o comando **git config --user.name _" nome de u
 > - **git mkdir "nome"** : **Cria** um novo diretório.
 > - **_dir_ : Lista** os diretórios *pastas* do local.
 > - **git echo "nome" > "nome.extensão"**  : **Cria** um novo arquivo com a extensão escolhida.
-> - **git mv "nome.ext" ./repositório :Move** o arquivo para o repositório escolhido.
+> - **git mv "nome.ext" ./repositório : Move** o arquivo para o repositório escolhido.
 > - **_ctrl_ L : Limpa** o terminal .
 > - **_cd nome_: Entra** no diretório escolhido .
 > - **_Seta para cima_ ^ : Lista** os últimos comandos realizados.
 > -  **_git del_ : Deleta** um arquivo dentro do diretório.
 > - **git status : Monitora** a atual situação do arquivo, se ele esta Unmodified , modified ou Staged, também apresenta dicas para um próximo comando.
 > - **git add : Adiciona** o arquivo para a área de Staged.
-> - **git restore --stage "nome":Reverte** o arquivo de Staged para não Staged.
-> -**git commit -m "string" :Escapsula** todos os dados do arquivo, deixando-o pronto para ser empurrado para o servidor remoto.
-> -**explorer "nome" :Abre** o diretório ou arquivo dereto no explorer gráfico do windows.
+> - **git restore --stage "nome": Reverte** o arquivo de Staged para não Staged.
+> -**git commit -m "string" : Escapsula** todos os dados do arquivo, deixando-o pronto para ser empurrado para o servidor remoto.
+> -**explorer "nome" : Abre** o diretório ou arquivo dereto no explorer gráfico do windows.
+> -**git config --list : Trará** todas as configurações inseridas no seu repositório local Git.
+> -**git config --global --unset _"configurações específicas"_** : Altera as configurações do Git. 
 
  ## **Formas de autenticação:**
  ###### **1 - Chave SSH.**
@@ -69,8 +71,8 @@ Dentro do terminal _Git_ , insira os seguintes comandos:
  - ssh-keygen -t ed25519 -C email@gmail.com , onde **ed** é o tipo de Criptografia , e o e-mail deverá ser o mesmo de sua conta do Git Hub.
  Após o **Enter** , o terminal lhe entregará respostas de que foram geradas às chaves pública e privada , e o local onde estão.
  - Em seguida **Enter** novamente, agora você deve cadastrar uma senha , que será confirmada no próximo passo, e finalizará confirmando que foram geradas as chaves.
- - Agora você mavegada no terminal do Git Bash até o diretório que foram salvas as chaves , e dentro do mesmo, dara o comanda **ls** que listará as chaves geradas ,_id_ed25519_ e _id_ed25519.pub_, esta última sendo a chave pública.
- - Agora com o comando **cat _id_ed25519.pub_** , teremos no terminal a chave pública , que será copiada e adicionada no servidor Git Hub.Em seguida para que a chave seja usada de forma automatica ,no terminal Git Bash e dentro do diretório das chaves , entraremos com o comando **eval $(ssh-agent -s)**, que dara início a chave SSH. Em seguida o terminal lhe mostra o agent _pid_ com o _número_ da inicialização ,e você entregará a chave privada ssh, para o agente pid com o seguinte comando **ssh-add _id_ed25519**, opós isto o terminal lhe pede a senha cadastrada anteriormente , e lhe imprimi no terminal a mensagem que identif added com o _id_ed25519_ e e-mail de cadastro do GitHub.
+ - Agora você mavegada no terminal do Git Bash até o diretório que foram salvas as chaves , e dentro do mesmo, dará um nome para ele o cem seguida omanda **ls** que listará as chaves geradas ,_id_ed25519_ e _id_ed25519.pub_, esta última sendo a chave pública.
+ - Agora com o comando **cat _id_ed25519.pub_** , teremos no terminal a chave pública , que será copiada e adicionada no servidor Git Hub.Em seguida para que a chave seja usada de forma automatica ,no terminal Git Bash e dentro do diretório das chaves , entraremos com o comando **eval $(ssh-agent -s)**, que dará um nome para ele iníem seguida cio a chave SSH. Em seguida o terminal lhe mostra o agent _pid_ com o _número_ da inicialização ,e você entregará a chave privada ssh, para o agente pid com o seguinte comando **ssh-add _id_ed25519**, opós isto o terminal lhe pede a senha cadastrada anteriormente , e lhe imprimi no terminal a mensagem que identif added com o _id_ed25519_ e e-mail de cadastro do GitHub.
 
  ## Exemplo de uso de chave SSH.
  ### _Clonando Repositório Git Hub , com protocolo SSH._
@@ -103,3 +105,16 @@ Dentro do terminal _Git_ , insira os seguintes comandos:
 - As alterações que são feitas no repositório local , não repercutem diretamente no servidor remoto.Para isto , deve ser realizado o envio através de comando do terminal GitHub. 
 - Os arquivos ficam alternando entre a WORKING DIRECTORY e a STAGING ÁREA ,quando alterado, o arquivo é enviado sempre com o comando **add (*)** para a STAGING ÁREA, se alterado novamente, ele retora para a WORKING DIRECTORY, aguardando novamente o comando **add (*)**.
 - **Commit**: Estando o arquivo na STAGING ÁREA , para que o mesmo seja direcionado ao LOCAL REPOSITORY, é executado no terminal GitHub o comando **commit**, que vai encapsular todos os dados do arquivo , e envia-lo para a LOCAL REPOSITORY .
+---
+### Trabalhando com o GitHub:
+**Dicas de uso para o GitHub**
+- Deixe sua conta criada no Git e o no GitHub com o mesmo **user.email**, e **user.name**.
+-  Alterando o "usuário" e "email" do Git:
+> 1. Use o comando **git config --global --unset user.email** e **git config --global --unset user.name**. Em seguida entre com o comando **git config --list** onde visualisará a lista de configurações do Git, e não mais terá **user.name e user.email** nesta lista.
+   2. Agora use **git config --global user.email "novo e-mail"** e **git config --global user.name "novo usuário"**
+- Rede social : o GitHub funciona como uma rede social , onde você pode seguir outros usuários e ser seguido , terá acesso aos códigos de outras pessoas e quais projetos estão trabalhando .
+- Criando repositório:
+>1. Em seu browser preferido e na página do GitHub , de um clic no botão **Sua conta** , depois vá em **Your repositories** . Na próxima tela você dará um clic no botão **NEW** onde terá acesso aos campos que vai preencher para a criação da conta.
+  2. Preencha os campos **Repository name** onde dará um nome para ele -> em seguida **Description**, aqui fará uma descrição sobre seu repositório -> **Public or Private** , outros usuários do GitHub terão acesso ou não a seu repositório **Initialize this repository with**, esta parte vai ter algumas escolhas a fazer ,escolha **Add a README file** onde este arquivo markdown registra o histórico de seu repositório.
+---
+
