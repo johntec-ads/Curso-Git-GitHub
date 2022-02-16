@@ -1,8 +1,9 @@
+---
 # **Tutorial curso git / git hub.**
-### Links úteis:
-- [Sintax markdows.](https://www.markdownguide.org/getting-started/)
-- [Exercícios Markdown.](https://www.markdowntutorial.com)
-
+### Links úteis: 
+ - [Sintax markdows.](https://www.markdownguide.org/getting-started/)
+ - [Exercícios Markdown.](https://www.markdowntutorial.com)
+---
 ### Objetos fundamentais do Guit.
 - **Blobs.**  "Bolha":
 _Objeto que armazena metadados,detem o SHA1 do arquivo,ou seja, a 
@@ -41,12 +42,20 @@ Novamente no terminal, entre com o comando **git config --user.name _" nome de u
 
 
 
-###### **Alguns comandos básicos** :
-> - _dir_ : **Lista** os diretórios *pastas* do local.
-> - _ctrl_ + l : **Limpa** o terminal .
-> - _cd nome da pasta_ : **Entra** no diretório escolhido .
-> - _Seta para cima_ ^ : **Lista** os últimos comandos realizados.
-> -  _del_ : **Deleta** um arquivo dentro do diretório.
+#### **Comandos básicos** :
+> - **git mkdir "nome"** : **Cria** um novo diretório.
+> - **_dir_ : Lista** os diretórios *pastas* do local.
+> - **git echo "nome" > "nome.extensão"**  : **Cria** um novo arquivo com a extensão escolhida.
+> - **git mv "nome.ext" ./repositório :Move** o arquivo para o repositório escolhido.
+> - **_ctrl_ L : Limpa** o terminal .
+> - **_cd nome_: Entra** no diretório escolhido .
+> - **_Seta para cima_ ^ : Lista** os últimos comandos realizados.
+> -  **_git del_ : Deleta** um arquivo dentro do diretório.
+> - **git status : Monitora** a atual situação do arquivo, se ele esta Unmodified , modified ou Staged, também apresenta dicas para um próximo comando.
+> - **git add : Adiciona** o arquivo para a área de Staged.
+> - **git restore --stage "nome":Reverte** o arquivo de Staged para não Staged.
+> -**git commit -m "string" :Escapsula** todos os dados do arquivo, deixando-o pronto para ser empurrado para o servidor remoto.
+> -**explorer "nome" :Abre** o diretório ou arquivo dereto no explorer gráfico do windows.
 
  ## **Formas de autenticação:**
  ###### **1 - Chave SSH.**
@@ -90,6 +99,7 @@ Dentro do terminal _Git_ , insira os seguintes comandos:
 - **Commit**. Quando após mudar o status dos arquivos para **Modified** ,usamos o **git commit -m "streng"** para encapsular todos os dados do arquivo,que em seguida terá o retorno dos arquivos encapsulados para o status de **Modified** novamente.
 ###### **Repositórios e Servidores.**
 - Servidor -> REMOTE REPOSITORY.
-- Ambiente de desenvolvimento -> WORKING DIRECTORY -> STAGING AREA -> LOCAL REPOSITORY.
+- Ambiente de desenvolvimento -> WORKING DIRECTORY -> STAGING ÁREA -> LOCAL REPOSITORY.
 - As alterações que são feitas no repositório local , não repercutem diretamente no servidor remoto.Para isto , deve ser realizado o envio através de comando do terminal GitHub. 
-- Os arquivos ficam alternando entre a WORKING DIRECTORY e a STAGING AREA ,quando alterado, o arquivo é enviado sempre com o comando **add (*)** para a STAGING AREA, se alterado novamente, ele retora para a WORKING DIRECTORY, e aguarda novamente o comando **add (*)**.
+- Os arquivos ficam alternando entre a WORKING DIRECTORY e a STAGING ÁREA ,quando alterado, o arquivo é enviado sempre com o comando **add (*)** para a STAGING ÁREA, se alterado novamente, ele retora para a WORKING DIRECTORY, aguardando novamente o comando **add (*)**.
+- **Commit**: Estando o arquivo na STAGING ÁREA , para que o mesmo seja direcionado ao LOCAL REPOSITORY, é executado no terminal GitHub o comando **commit**, que vai encapsular todos os dados do arquivo , e envia-lo para a LOCAL REPOSITORY .
