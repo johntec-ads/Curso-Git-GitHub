@@ -1,4 +1,3 @@
----
 # **Tutorial curso git / git hub.**
 ### Links úteis: 
  - [Sintax markdows.](https://www.markdownguide.org/getting-started/)
@@ -122,7 +121,6 @@ Dentro do terminal _Git_ , insira os seguintes comandos:
   4.Agora o que temos a fazer é empurrar o repositório local para o repositório remoto, para isso temos que apontar a **origem remota** que encontra-se no GitHub, e após este apontamento, podemos assim  empurrar os commits do GitBush para o GitHub.
       - Então no terminal do GitBush, dentro do respectivo repositório, vamos entrar com o seguinte comando: **git remote add origin "https://"**, onde pelo endereço copiado , apontará o repositório remoto para o repositorio local.(Obs : O origin é o criado por convensão, para que não tenha que digitar o endereço https:// sempre que empurrar os commits para o servidor remoto)
       - Após ter realizado o apontamento , de o comando **git romote -v** ,para listar os repositórios cadastrados.
-  5. O que faremos a seguir, é empurrar o repositório apontado no GitBush para o GitHub, com o seguinte comando :**git push origin master**,  
-      
+  5. O que faremos a seguir, é empurrar o repositório apontado no GitBush para o GitHub, com o seguinte comando: **git push origin master** -> Tecle **Enter** , em seguida pedira sua credencial de autenticação , que será loguin e senha, Token cadastrado ou chave SSH 
 --- 
 
