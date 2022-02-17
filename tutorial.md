@@ -58,6 +58,7 @@ Novamente no terminal, entre com o comando **git config --user.name _" nome de u
 > -**explorer "nome" : Abre** o diretório ou arquivo dereto no explorer gráfico do windows.
 > -**git config --list : Trará** todas as configurações inseridas no seu repositório local Git.
 > -**git config --global --unset _"configurações específicas"_** : Altera as configurações do Git. 
+> -**git remote add origin "https://" Aponta** a origem do repositório remoto, para o qual você empurrará seu commits do GitBush. 
 
  ## **Formas de autenticação:**
  ###### **1 - Chave SSH.**
@@ -109,12 +110,19 @@ Dentro do terminal _Git_ , insira os seguintes comandos:
 ### Trabalhando com o GitHub:
 **Dicas de uso para o GitHub**
 - Deixe sua conta criada no Git e o no GitHub com o mesmo **user.email**, e **user.name**.
--  Alterando o "usuário" e "email" do Git:
+
+- **Alterando o "usuário" e "email" do Git:**
 > 1. Use o comando **git config --global --unset user.email** e **git config --global --unset user.name**. Em seguida entre com o comando **git config --list** onde visualisará a lista de configurações do Git, e não mais terá **user.name e user.email** nesta lista.
    2. Agora use **git config --global user.email "novo e-mail"** e **git config --global user.name "novo usuário"**
 - Rede social : o GitHub funciona como uma rede social , onde você pode seguir outros usuários e ser seguido , terá acesso aos códigos de outras pessoas e quais projetos estão trabalhando .
-- Criando repositório:
+- **Criando repositório:**
 >1. Em seu browser preferido e na página do GitHub , de um clic no botão **Sua conta** , depois vá em **Your repositories** . Na próxima tela você dará um clic no botão **NEW** onde terá acesso aos campos que vai preencher para a criação da conta.
-  2. Preencha os campos **Repository name** onde dará um nome para ele -> em seguida **Description**, aqui fará uma descrição sobre seu repositório -> **Public or Private** , outros usuários do GitHub terão acesso ou não a seu repositório **Initialize this repository with**, esta parte vai ter algumas escolhas a fazer ,escolha **Add a README file** onde este arquivo markdown registra o histórico de seu repositório.
----
+  2. Preencha os campos **Repository name** onde dará um nome para ele **->** em seguida **Description**, aqui fará uma descrição sobre seu repositório **-> Public or Private** ,determina se  outros usuários do GitHub terão ou não, acesso  a seu repositório. **-> Initialize this repository with**, esta parte vai ter algumas escolhas a fazer ,escolha **Add a README file** onde este arquivo README.markdown será criado de forma automática e tem a função de registrar o histórico de seu repositório.
+  3.Após criado o repositório no GitHub , a página que virá em seguida , mostra entre vários dados , o endereço https:// do seu novo repositório. **->** O passo seguinte é o de apontar o repositório local **Git** para o Repositório em nuvem **GitHub**, copiando o endereço https que o GitHub forneceu,com o comando CTRL C.
+  4.Agora o que temos a fazer é empurrar o repositório local para o repositório remoto, para isso temos que apontar a **origem remota** que encontra-se no GitHub, e após este apontamento, podemos assim  empurrar os commits do GitBush para o GitHub.
+      - Então no terminal do GitBush, dentro do respectivo repositório, vamos entrar com o seguinte comando: **git remote add origin "https://"**, onde pelo endereço copiado , apontará o repositório remoto para o repositorio local.(Obs : O origin é o criado por convensão, para que não tenha que digitar o endereço https:// sempre que empurrar os commits para o servidor remoto)
+      - Após ter realizado o apontamento , de o comando **git romote -v** ,para listar os repositórios cadastrados.
+  5. O que faremos a seguir, é empurrar o repositório apontado no GitBush para o GitHub, com o seguinte comando :**git push origin master**,  
+      
+--- 
 
