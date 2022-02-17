@@ -122,5 +122,10 @@ Dentro do terminal _Git_ , insira os seguintes comandos:
       - Então no terminal do GitBush, dentro do respectivo repositório, vamos entrar com o seguinte comando: **git remote add origin "https://"**, onde pelo endereço copiado , apontará o repositório remoto para o repositorio local.(Obs : O origin é o criado por convensão, para que não tenha que digitar o endereço https:// sempre que empurrar os commits para o servidor remoto)
       - Após ter realizado o apontamento , de o comando **git romote -v** ,para listar os repositórios cadastrados.
   5. O que faremos a seguir, é empurrar o repositório apontado no GitBush para o GitHub, com o seguinte comando: **git push origin master** -> Tecle **Enter** , em seguida pedira sua credencial de autenticação , que será loguin e senha, Token cadastrado ou chave SSH 
+  ### Conflitos :
+-  **Conflito de Merge**. Quando dois desevolvedores atribuem modificações em um mesmo projeto , e tais modificações estão exatamente na mesma linha de código , então um dos desevolvedores empurra seu commit para o GitHub, e o mesmo é atualizado . O próximo movimento é do outro desenvolvedor, que  realiza seu commit seguido de push para o GitHub, porém tendo as alterações feitas na mesma linha de comando, neste momento acontece o **conflito de Merge** , onde o GitHub lhe envia o aviso , que devido ao conflito , não lhe é permito finalizar o push.
+- **Resolvendo o conflito de merge**.Para que tal conflito seja resolvido , o GitHub lhe orienta que você puche o projeto atualizado para sua maquina, e realize suas alterações em consonância com o projeto atual, e assim ,o GitHub lhe permitirá empurrar nomente as atualizações inseridas no projeto.
 --- 
+
+
 
